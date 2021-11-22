@@ -2,6 +2,11 @@ package br.com.livraria.modelo;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,13 +18,15 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Livro {
-	// mínimo 10 caractere
-	private String titulo;
 	
-	//deve ser maior ou igual a 100
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
+	private Long id;
+	private String titulo;	
 	private Integer numeroPagina;
-// deve ser menor que a data atual
 	private LocalDate dataLancamento;
+	private Autor autor;
 
 }

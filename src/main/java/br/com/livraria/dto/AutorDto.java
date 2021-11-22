@@ -9,6 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AutorDto {
+	private Integer id;
 	private String nome;
 	private String email;
 	private LocalDate datanascimento;
