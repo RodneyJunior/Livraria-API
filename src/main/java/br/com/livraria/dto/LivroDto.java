@@ -2,6 +2,7 @@ package br.com.livraria.dto;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 
 import lombok.Getter;
 
@@ -16,5 +17,8 @@ public class LivroDto {
 	private String titulo;
 	private Integer numeroPagina;
 	private LocalDate dataLancamento;
+	
+	private Long autorId;
+
 
 }

@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.livraria.dto.LivroDto;
@@ -11,7 +12,7 @@ import br.com.livraria.dto.LivroForm;
 import br.com.livraria.modelo.Livro;
 import br.com.livraria.repository.LivroRepository;
 
-
+@Service
 public class LivroService {
 
 	@Autowired
@@ -26,9 +27,9 @@ public class LivroService {
 	}
 	
 	@Transactional
-	public LivroDto Cadastrar(LivroForm dto)
+	public LivroDto Cadastrar(LivroForm frm)
 	{
-			Livro livro = modelMapper.map(dto, Livro.class);
+			Livro livro = modelMapper.map(frm, Livro.class);
 			livro.setId(null);
 			livroRepository.save(livro);
 			

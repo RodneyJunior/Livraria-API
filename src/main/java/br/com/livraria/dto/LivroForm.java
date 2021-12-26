@@ -3,6 +3,7 @@ package br.com.livraria.dto;
 import java.time.LocalDate;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Size;
 
@@ -26,7 +27,8 @@ public class LivroForm {
 	
 	@PastOrPresent
 	private LocalDate dataLancamento;
-	
-	@JsonAlias("autor_id")
+
+	@JsonAlias("autor_id")	
 	private Long autorId;
+
 }

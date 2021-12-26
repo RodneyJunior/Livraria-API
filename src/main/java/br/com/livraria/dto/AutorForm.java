@@ -14,5 +14,4 @@ public class AutorForm {
 	private LocalDate datanascimento;
 	private String minicurriculo;
 	
-
 }

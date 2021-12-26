@@ -3,6 +3,7 @@ package br.com.livraria.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import org.modelmapper.ModelMapper;
@@ -12,7 +13,7 @@ import br.com.livraria.dto.AutorForm;
 import br.com.livraria.modelo.Autor;
 import br.com.livraria.repository.AutorRepository;
 
-
+@Service
 public class AutorService {
 
 	@Autowired
@@ -27,9 +28,9 @@ public class AutorService {
 	}
 	
 	@Transactional
-	public AutorDto Cadastrar(AutorForm dto)
+	public AutorDto Cadastrar(AutorForm frm)
 	{
-			Autor autor = modelMapper.map(dto, Autor.class);
+			Autor autor = modelMapper.map(frm, Autor.class);
 			autor.setId(null);
 			autorRepository.save(autor);
 			
