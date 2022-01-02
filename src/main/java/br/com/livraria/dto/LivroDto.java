@@ -2,6 +2,7 @@ package br.com.livraria.dto;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 
 import lombok.Getter;
 
