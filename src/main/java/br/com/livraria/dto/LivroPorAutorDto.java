@@ -8,6 +8,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class LivroPorAutorDto {
 	private String autor;
-	private Integer quantidadedeLivros;
+	private Long quantidadedeLivros;
 	private Double percentual;
 }

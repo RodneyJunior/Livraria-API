@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +21,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "livros")
 public class Livro {
 	
 	@Id
@@ -27,6 +30,7 @@ public class Livro {
 	private String titulo;	
 	private Integer numeroPagina;
 	private LocalDate dataLancamento;
+	@ManyToOne
 	private Autor autor;
 
 }

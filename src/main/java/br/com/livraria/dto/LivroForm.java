@@ -26,7 +26,8 @@ public class LivroForm {
 	
 	@PastOrPresent
 	private LocalDate dataLancamento;
-	
-	@JsonAlias("autor_id")
+
+	@JsonAlias("autor_id")	
 	private Long autorId;
+
 }

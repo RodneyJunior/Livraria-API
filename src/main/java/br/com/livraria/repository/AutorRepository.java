@@ -1,14 +1,10 @@
 package br.com.livraria.repository;
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
-import br.com.livraria.dto.LivroPorAutorDto;
 import br.com.livraria.modelo.Autor;
 
 
-public interface AutorRepository extends JpaRepository<Autor, Integer>{
+public interface AutorRepository extends JpaRepository<Autor, Long>{
 	
 	/*@Query("SELECT new br.com.alura.carteira.dto.LivroPorAutorDto("
 			+ "t.ticker, "
